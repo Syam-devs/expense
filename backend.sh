@@ -73,4 +73,4 @@ VALIDATE $? "daemon,enable,start the nodejs:20"
 dnf install mysql -y &>>$LOGFILE
 VALIDATE $? "Installing mysql"
 
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pExpenseApp@1 < /app/schema/backend.sql
+mysql -h 172.31.23.109 -uroot -pExpenseApp@1 < /app/schema/backend.sql
