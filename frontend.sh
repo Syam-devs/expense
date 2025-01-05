@@ -44,7 +44,7 @@ curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-fro
 VALIDATE $? "Download the content"
 
 cd /usr/share/nginx/html
-unzip /tmp/frontend.zip &>>$LOGFILE
+unzip /tmp/frontend.zip -y &>>$LOGFILE
 VALIDATE $? "Extract the code"
 
 cp /home/ec2-user/expense/expense.conf /etc/nginx/default.d/expense.conf
